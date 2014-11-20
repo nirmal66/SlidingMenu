@@ -49,8 +49,15 @@ public class MainActivity extends SlidingFragmentActivity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				
+				android.support.v4.app.FragmentTransaction t = getSupportFragmentManager()
+						.beginTransaction();
+				t.replace(R.id.transaction, new NotificationFragment(), null);
+				t.addToBackStack(null);
+				t.commit();
 				Toast.makeText(getApplicationContext(), "first",
 						Toast.LENGTH_LONG).show();
+				mLayout.collapsePanel();
 			}
 		});
 
