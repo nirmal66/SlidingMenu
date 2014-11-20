@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top"
+        sothree:dragView="@+id/dragView"
+        sothree:panelHeight="25dp"
+        sothree:shadowHeight="0dp" >
+
+        <!-- MAIN CONTENT -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" >
+
+            <FrameLayout
+                android:id="@+id/transaction"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+        <!-- SLIDING LAYOUT -->
+
+        <RelativeLayout
+            android:id="@+id/dragView"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:clickable="true"
+            android:focusable="false"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/first"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff" >
+
+                <TextView
+                    android:id="@+id/first_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical"
+                    android:text="First"
+                    android:textColor="#128C79"
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/first"
+                android:background="#128C79" />
+
+            <RelativeLayout
+                android:id="@+id/second"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line"
+                android:background="#ffffff" >
+
+                <TextView
+                    android:id="@+id/second_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical"
+                    android:text="Second"
+                    android:textColor="#128C79"
+                    android:textSize="20sp"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/second"
+                android:background="#128C79" />
+
+            <RelativeLayout
+                android:id="@+id/menu_action"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line1" >
+
+                <ImageView
+                    android:id="@+id/down"
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:alpha="0.9"
+                    android:src="@drawable/down_menu"
+                    android:visibility="visible" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+</RelativeLayout>
