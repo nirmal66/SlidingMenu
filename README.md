@@ -14,6 +14,7 @@ https://github.com/umano/AndroidSlidingUpPanel(umano).
 Credits:
 
 Jeremy Feinstein SlidingMenu.
+
 Copyright 2012-2014 Jeremy Feinstein
 
 Licensed under the Apache License, Version 2.0 (the "License");
